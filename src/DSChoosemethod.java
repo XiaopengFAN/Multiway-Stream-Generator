@@ -1,6 +1,8 @@
 import java.util.Map;
 
 public class DSChoosemethod {
+//    This Class can be inherit to Override op() and calc() methods.
+//    It's Theta join is keyA > keyB > keyC
     DSModel[] models;
     double zDouble;
     int zInt;
