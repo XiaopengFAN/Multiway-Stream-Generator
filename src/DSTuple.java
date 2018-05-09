@@ -45,10 +45,10 @@ public class DSTuple {
         }
 //        Then we should print tuple's time stamp.
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//        String time = df.format(new Date());                  // Option 1
-//        text += ("Time" + "  " + time +  "  " );
-        String time = String.valueOf(new Date().getTime());     // Option 2
-        text += (time + ",");
+        String time = df.format(new Date());                  // Option 1
+        text += ( "," + time +  "," );
+//        String time = String.valueOf(new Date().getTime());     // Option 2
+//        text += (time + ",");
 
 //        Finally the other properties
         for (Map.Entry<String, String> entry : tpmap.entrySet()) {
