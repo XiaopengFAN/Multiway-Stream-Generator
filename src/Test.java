@@ -17,17 +17,19 @@ public class Test {
         models[3].useUniformInt("CC",0,10);
 
 //        It's the choose method that you suppose, you can use it to optimize the choose-rate.
-//        It's NOT FINISHED yet.
         DSChoosemethod[] chmethods = new DSChoosemethod[1];
         DSModel[] chKey0 = new DSModel[3];
         for (int i = 0; i < 3; i++) {
             chKey0[i] = models[i+1];
         }
-        chmethods[0] = new DSChoosemethod(chKey0,0);
+        chmethods[0] = new DSChoosemethod(chKey0);
+        DSChoosemethod.calChooseRate(chmethods);
+
+//        Calculate all theta-join
 
 //        Then send all your models into DSTuple, it will generate tuples for you.
 //        You can change I/O format in it.
-        DSTuple tuple = new DSTuple(models,chmethods);
+        DSTuple tuple = new DSTuple(models);
         tuple.setPrimaryKey("BusID");   // Set the primary key of tuple that will shown first.
 
 //        Finally set threads' period and amount that you want.

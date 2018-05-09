@@ -7,28 +7,20 @@ import java.util.concurrent.TimeUnit;
 
 public class MultiwayStreamGenerator {
     private long period;
-    private int threadsNum;
+    private int threadsAmount;
+    private DSChoosemethod[] chmethods;
     private DSTuple tuple;
 
 
-    MultiwayStreamGenerator(long period, int threadsNum, DSTuple tuple){
+    MultiwayStreamGenerator(long period, int threadsAmount, DSTuple tuple){
 //        Part I.       Set period & threads' amount
         this.period = period;
-        this.threadsNum = threadsNum;
+        this.threadsAmount = threadsAmount;
 //        Part II.      Set tuple property
         this.tuple = tuple;
     }
 
     public void start(){
-//        Calculate choose-rate
-        tuple.calChooseRate();
-//        System.out.println("Enter ok to start generation");
-//        try {
-//            System.in.read();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
 //        Set generation task
         Runnable runnable = new Runnable() {
             @Override
@@ -38,7 +30,7 @@ public class MultiwayStreamGenerator {
         };
 
 //        Create a thread_pool
-        ScheduledExecutorService pump = Executors.newScheduledThreadPool(threadsNum);
+        ScheduledExecutorService pump = Executors.newScheduledThreadPool(threadsAmount);
         pump.scheduleAtFixedRate(runnable,0, period, TimeUnit.MILLISECONDS);
     }
 

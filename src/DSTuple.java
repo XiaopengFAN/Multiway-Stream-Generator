@@ -7,24 +7,15 @@ import java.util.Map;
 
 public class DSTuple {
     private DSModel[] models;
-    private DSChoosemethod[] chmethods;
     private String primaryKey="";
 
-    DSTuple (DSModel[] models, DSChoosemethod[] chmethods) {
+    DSTuple (DSModel[] models) {
         this.models = models;
-        this.chmethods = chmethods;
     }
 
     public void setPrimaryKey(String primaryKey){
 //        Set the primary key of this tuple that will shown first.
         this.primaryKey = primaryKey;
-    }
-
-    public void calChooseRate() {
-//        Calculate choose-rate of each method
-        for (DSChoosemethod chmethod : chmethods) {
-            chmethod.calc();
-        }
     }
 
     public String produceTuple() {
