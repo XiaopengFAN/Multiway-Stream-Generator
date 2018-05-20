@@ -1,6 +1,6 @@
 ## Multiway-Stream-Generator
 
-Multiway Stream Generator (MS-Generator) can generate multi-way streams for researchers to evaluate the performance of their algorithms or application.
+Multiway Stream Generator (MS-Generator) can generate multi-way streams for researchers to evaluate the performance of their algorithms or applications. It is developed initially by Xiaopeng Fan, Youjun Wang and Yongyi Zhou from Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences at Shenzhen China. 
 
 ## Functions
 
