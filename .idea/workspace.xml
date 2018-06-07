@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Multiway-Stream-Generator:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="8b4e89ae-dc3d-478e-88b1-7b6215cfd40f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSChoosemethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSChoosemethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DSModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DSTuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSTuple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +27,11 @@
       <file leaf-file-name="MultiwayStreamGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="394">
+              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -26,39 +39,32 @@
       <file leaf-file-name="DSChoosemethod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DSChoosemethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-316">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+            <state relative-caret-position="-875">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DSModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DSModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7750">
-              <caret line="326" column="21" selection-start-line="326" selection-start-column="21" selection-end-line="326" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DSTuple.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DSTuple.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DSTuple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="-56">
+              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+            <state relative-caret-position="-4405">
+              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +98,8 @@
       <find>calc</find>
       <find>threadsNum</find>
       <find>op</find>
+      <find>models3</find>
+      <find>\t</find>
     </findStrings>
     <replaceStrings>
       <replace>period</replace>
@@ -109,6 +117,8 @@
       <replace>calChooseRate</replace>
       <replace>threadsAmount</replace>
       <replace>theta_join</replace>
+      <replace>models[2]</replace>
+      <replace>,</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -119,12 +129,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/initDataSource.java" />
         <option value="$PROJECT_DIR$/src/processTask.java" />
-        <option value="$PROJECT_DIR$/src/DSModel.java" />
         <option value="$PROJECT_DIR$/src/UnboundedDataSource.java" />
+        <option value="$PROJECT_DIR$/src/DSModel.java" />
         <option value="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/DSChoosemethod.java" />
         <option value="$PROJECT_DIR$/src/DSTuple.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
   </component>
@@ -134,7 +144,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
@@ -170,10 +180,10 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Joy/IdeaProjects/UnboundedDataSource/src/Test.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -287,19 +297,32 @@
       <workItem from="1525835191566" duration="607000" />
       <workItem from="1525838882750" duration="122000" />
       <workItem from="1525869113644" duration="1655000" />
-      <workItem from="1525872955375" duration="357000" />
+      <workItem from="1525872955375" duration="826000" />
+      <workItem from="1526647945369" duration="5383000" />
+      <workItem from="1526703553924" duration="4664000" />
+      <workItem from="1526708460351" duration="17000" />
+      <workItem from="1526723220979" duration="303000" />
+      <workItem from="1526734318716" duration="4689000" />
+      <workItem from="1526797421579" duration="10205000" />
+      <workItem from="1526810979171" duration="4446000" />
+      <workItem from="1526868200483" duration="3178000" />
+      <workItem from="1526896667357" duration="1350000" />
+      <workItem from="1526996113327" duration="5523000" />
+      <workItem from="1527007563080" duration="1471000" />
+      <workItem from="1528096200611" duration="6548000" />
+      <workItem from="1528365210057" duration="1956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148149000" />
+    <option name="totallyTimeSpent" value="198351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3280543" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -318,14 +341,13 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39887005" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39819005" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3280543" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +358,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="41" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -369,13 +391,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DSTuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="725">
@@ -710,42 +725,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Multiway-Stream-Generator-Poisson/src/DSModel.java" />
     <entry file="file://$PROJECT_DIR$/src/DSModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7750">
-          <caret line="326" column="21" selection-start-line="326" selection-start-column="21" selection-end-line="326" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DSChoosemethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-316">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        <state relative-caret-position="25">
+          <caret line="336" column="20" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
           <folding>
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#11133#11134#0" expanded="true" />
+            <element signature="e#11206#11207#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSTuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state relative-caret-position="-56">
+          <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DSChoosemethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-875">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4405">
+          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -755,10 +780,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>Multiway-Stream-Generator:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -801,7 +828,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>UnboundedDataSource</last-edited>
+          <last-edited>Multiway-Stream-Generator</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

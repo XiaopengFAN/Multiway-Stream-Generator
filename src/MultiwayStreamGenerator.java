@@ -5,10 +5,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import java.util.Properties;
+
 public class MultiwayStreamGenerator {
     private long period;
     private int threadsAmount;
-    private DSChoosemethod[] chmethods;
     private DSTuple tuple;
 
 
@@ -25,13 +26,16 @@ public class MultiwayStreamGenerator {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                tuple.produceTuple();
+                String text = tuple.produceTuple();
+                System.out.println(text);
             }
         };
 
 //        Create a thread_pool
         ScheduledExecutorService pump = Executors.newScheduledThreadPool(threadsAmount);
-        pump.scheduleAtFixedRate(runnable,0, period, TimeUnit.MILLISECONDS);
+        for (int i = 0; i < threadsAmount; i++) {
+            pump.scheduleAtFixedRate(runnable,0, period, TimeUnit.MILLISECONDS);
+        }
     }
 
 }

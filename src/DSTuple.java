@@ -39,14 +39,14 @@ public class DSTuple {
 //        Check if we have the Key-Property that should be print out first.
         if (tpmap.containsKey(primaryKey)){
 //            text += (primaryKey + "  " + tpmap.get(primaryKey) +  "  " );     // Option 1
-            text += (tpmap.get(primaryKey) + ",");                              // Option 2
+            text += (tpmap.get(primaryKey) + ",,");                              // Option 2
 
             tpmap.remove(primaryKey);
         }
 //        Then we should print tuple's time stamp.
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = df.format(new Date());                  // Option 1
-        text += ( "," + time +  "," );
+        text += ( time +  "," );
 //        String time = String.valueOf(new Date().getTime());     // Option 2
 //        text += (time + ",");
 
@@ -59,7 +59,7 @@ public class DSTuple {
         text = text.substring(0,text.length()-1);
 
 //        Finally return this tuple as String
-        System.out.println(text);
+//        System.out.println(text);
         return (text+"\n");
     }
 }

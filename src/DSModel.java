@@ -202,18 +202,29 @@ public class DSModel {
         private int lambda;
 
         private void createPoissonMap(){
-            double cdf = 0, factorial = 0;
+            double cdf = 0, factorial = 1, prob=0;
+
+//            k=0 is a special case
+            prob = Math.exp(-lambda);
+            cdf += prob;
+            probmap.put(0,prob);
+            map.put(0, cdf);
 
             for (int k = 1; cdf < 1.0; k++) {
-                factorial = 0;
-                for (int i = 0; i < k; i++){
-                    factorial *= k;
+                factorial = 1;
+                for (int i = 1; i <= k; i++){
+                    factorial *= i;
                 }
-                double prob = Math.pow(lambda,k) * Math.exp(-lambda) / factorial;
-                cdf += prob;
-                probmap.put(k,prob);
-                map.put(k, cdf);
+                prob = Math.pow(lambda,k) / factorial * Math.exp(-lambda) ;
+//                System.out.println(Integer.toString(k)+','+Double.toString(prob));
+                if (prob>0.0 && prob<1.0) {
+                    cdf += prob;
+                    probmap.put(k, prob);
+                    map.put(k, cdf);
+                }
 //                System.out.println(k+"\t"+cdf);
+                if ( cdf>0.9 && cdf<0.99 && !(prob>=0.0 && prob<1) ) System.exit(500);
+                if ( cdf>0.99 && !(prob>=0.0 && prob<1)) break;
             }
         }
 
@@ -250,11 +261,14 @@ public class DSModel {
                 hn += 1.0/Math.pow(i,s);
             }
 
-            for (int k = 1; k <= N; k++) {
+            for (int k = 1; k<=N; k++) {
                 double prob = 1/(Math.pow(k,s)) / hn;
-                cdf += prob;
-                probmap.put(k,prob);
-                map.put(k, cdf);
+//                System.out.println(Integer.toString(k)+'\t'+Double.toString(prob));
+                if (prob>0.0 && prob<1.0){
+                    cdf += prob;
+                    probmap.put(k,prob);
+                    map.put(k, cdf);
+                }
 //                System.out.println(k+"\t"+cdf);
             }
         }
@@ -310,7 +324,7 @@ public class DSModel {
     }
 
     private class UniformDouble {
-//        ATTENTION, it's range area is [low,high)
+        //        ATTENTION, it's range area is [low,high)
         private double low, high;
         private double generateUniformDouble () {
             return low + (high - low) * Math.random();
@@ -318,7 +332,7 @@ public class DSModel {
     }
 
     private class UniformInt {
-//        ATTENTION, it's range area is [low,high)
+        //        ATTENTION, it's range area is [low,high)
         private int low, high;
         private int generateUniformInt () {
             return (int) (low + (high - low) * Math.random());
