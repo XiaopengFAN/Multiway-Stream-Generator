@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DSChoosemethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSChoosemethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DSModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DSTuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DSTuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -24,35 +22,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MultiwayStreamGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DSChoosemethod.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/DSChoosemethod.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-875">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="2025">
+              <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#337#338#0" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#447#448#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DSTuple.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DSTuple.java">
+      <file leaf-file-name="DSModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DSModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-56">
-              <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="756">
+              <caret line="234" column="52" selection-start-line="234" selection-start-column="52" selection-end-line="234" selection-end-column="52" />
+              <folding>
+                <element signature="e#1155#1156#0" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,8 +56,8 @@
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4405">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+            <state relative-caret-position="400">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -100,6 +96,8 @@
       <find>op</find>
       <find>models3</find>
       <find>\t</find>
+      <find>chooseRate</find>
+      <find>exit(</find>
     </findStrings>
     <replaceStrings>
       <replace>period</replace>
@@ -119,6 +117,7 @@
       <replace>theta_join</replace>
       <replace>models[2]</replace>
       <replace>,</replace>
+      <replace>selectivity</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -130,10 +129,10 @@
         <option value="$PROJECT_DIR$/src/initDataSource.java" />
         <option value="$PROJECT_DIR$/src/processTask.java" />
         <option value="$PROJECT_DIR$/src/UnboundedDataSource.java" />
-        <option value="$PROJECT_DIR$/src/DSModel.java" />
         <option value="$PROJECT_DIR$/src/MultiwayStreamGenerator.java" />
-        <option value="$PROJECT_DIR$/src/DSChoosemethod.java" />
         <option value="$PROJECT_DIR$/src/DSTuple.java" />
+        <option value="$PROJECT_DIR$/src/DSChoosemethod.java" />
+        <option value="$PROJECT_DIR$/src/DSModel.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
@@ -155,6 +154,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,13 +171,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Joy/IdeaProjects/UnboundedDataSource/src/Test.java" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Joy/Documents/GitHub/Multiway-Stream-Generator/src/DSModel.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -311,18 +310,23 @@
       <workItem from="1527007563080" duration="1471000" />
       <workItem from="1528096200611" duration="6548000" />
       <workItem from="1528365210057" duration="1956000" />
+      <workItem from="1528689149049" duration="11412000" />
+      <workItem from="1528788178104" duration="92000" />
+      <workItem from="1528875556386" duration="312000" />
+      <workItem from="1529373279254" duration="222000" />
+      <workItem from="1529652839789" duration="5024000" />
+      <workItem from="1529844870790" duration="300000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198351000" />
+    <option name="totallyTimeSpent" value="215713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.3280543" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -348,6 +352,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3280543" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +363,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <option name="time" value="49" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -391,13 +396,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="725">
-          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DSModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -726,48 +724,58 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/Multiway-Stream-Generator-Poisson/src/DSModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/DSModel.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/io/FileOutputStream.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="336" column="20" selection-start-line="336" selection-start-column="20" selection-end-line="336" selection-end-column="20" />
-          <folding>
-            <element signature="e#11133#11134#0" expanded="true" />
-            <element signature="e#11206#11207#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="189">
+          <caret line="269" selection-start-line="269" selection-end-line="269" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSTuple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-56">
+        <state relative-caret-position="793">
           <caret line="41" column="48" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DSChoosemethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-875">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="2025">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#447#448#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultiwayStreamGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/DSModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        <state relative-caret-position="756">
+          <caret line="234" column="52" selection-start-line="234" selection-start-column="52" selection-end-line="234" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4405">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
+        <state relative-caret-position="400">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

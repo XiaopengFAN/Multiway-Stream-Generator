@@ -19,7 +19,7 @@ public class DSModel {
     private String md;                                      // It point out which model is used in this DSModel
     private String key;                                     // The name of this model, or a key in a tuple
     private Map<Integer,Double> map = new HashMap<>();      // It's used as CDF Map
-    private Map<Integer,Double> probmap = new HashMap<>();  // It's used as pmf Map
+    private Map<Integer,Double> probmap = new TreeMap<>();  // It's used as pmf Map
 
     private boolean haveNextGaussian = false;
     private double nextGaussian = 0;
@@ -36,6 +36,10 @@ public class DSModel {
 
     public String getKey() {
         return key;
+    }
+
+    public UniformInt getUniformInt(){
+        return uniformint;
     }
 
     public Map<Integer,Double> getMap() {
@@ -202,7 +206,7 @@ public class DSModel {
         private int lambda;
 
         private void createPoissonMap(){
-            double cdf = 0, factorial = 1, prob=0;
+            double cdf = 0, prob=0;
 
 //            k=0 is a special case
             prob = Math.exp(-lambda);
@@ -211,21 +215,27 @@ public class DSModel {
             map.put(0, cdf);
 
             for (int k = 1; cdf < 1.0; k++) {
-                factorial = 1;
+                int factorial = 1;
+
+                double B = Math.exp(-lambda);
+
                 for (int i = 1; i <= k; i++){
                     factorial *= i;
                 }
-                prob = Math.pow(lambda,k) / factorial * Math.exp(-lambda) ;
-//                System.out.println(Integer.toString(k)+','+Double.toString(prob));
+                double A = Math.pow(lambda,k);
+                prob = A / factorial * B;
+                System.out.println(Integer.toString(k)+'\t'+Double.toString(prob)+'\t'+Double.toString(A)
+                        +'\t'+Double.toString(B));
                 if (prob>0.0 && prob<1.0) {
                     cdf += prob;
                     probmap.put(k, prob);
                     map.put(k, cdf);
                 }
 //                System.out.println(k+"\t"+cdf);
-                if ( cdf>0.9 && cdf<0.99 && !(prob>=0.0 && prob<1) ) System.exit(500);
-                if ( cdf>0.99 && !(prob>=0.0 && prob<1)) break;
+                if ( k > lambda && prob <= 0) break;
             }
+
+            if (cdf < 0.9) System.exit(999999);
         }
 
         private int generatePoisson() {
@@ -331,7 +341,7 @@ public class DSModel {
         }
     }
 
-    private class UniformInt {
+    class UniformInt {
         //        ATTENTION, it's range area is [low,high)
         private int low, high;
         private int generateUniformInt () {
@@ -347,6 +357,14 @@ public class DSModel {
                 map.put(k, cdf);
 //                System.out.println(k+"\t"+cdf);
             }
+        }
+
+        public int getLow(){
+            return low;
+        }
+
+        public int getHigh(){
+            return high;
         }
     }
 
