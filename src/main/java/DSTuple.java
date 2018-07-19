@@ -39,7 +39,7 @@ public class DSTuple {
 //        Check if we have the Key-Property that should be print out first.
         if (tpmap.containsKey(primaryKey)){
 //            text += (primaryKey + "  " + tpmap.get(primaryKey) +  "  " );     // Option 1
-            text += (tpmap.get(primaryKey) + ",,");                              // Option 2
+            text += (tpmap.get(primaryKey) + ",");                              // Option 2
 
             tpmap.remove(primaryKey);
         }

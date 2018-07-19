@@ -13,15 +13,15 @@ The current distribution models are: gaussian distribution, exponential distribu
 
 3. set frequency, maximum concurrency of the generator.
 
-4. set the tuple's primary key, and their proportional distribution of different values (such as product A 60%, product B 40%).
+4. set the tuple's primary key, and their proportional distribution of different values (e.g. product A 60%, product B 40%).
 
-5. calculate the choosing-rate for each particular theta join.
+5. calculate the selectivity for each particular theta join.
 ```
 
 ## QuikUse
 
 In order to get a generator, you need to create a MultiwayStreamGenerator.
-In order to get a MultiwayStreamGenerator, you need to create DSModels and DSChooseMethods.
+In order to get a MultiwayStreamGenerator, you need to create DSModels and DSJoin.
 
 ### Create DSModel
 
@@ -49,19 +49,18 @@ The method to call the interface is:
 
 ```
 
-### Create DSChoosemethod
+### Create DSJoin
 
 This Class can be inherit to Override op() and calc() methods.
 It's Theta join is keyA > keyB > keyC
 ```markdown
-//        It's the choose method that you suppose, you can use it to optimize the choose-rate.
-//        It's NOT FINISHED yet.
-        DSChoosemethod[] chmethods = new DSChoosemethod[1];
-        DSModel[] chKey0 = new DSModel[3];
-        for (int i = 0; i < 3; i++) {
+
+        DSJoin[] joins = new DSJoin[1];
+        DSModel[] chKey0 = new DSModel[3];           // cheKey_i is the DSModel you want to join in joins[i] ,
+        for (int i = 0; i < chKey0.length; i++) {
             chKey0[i] = models[i+1];
         }
-        chmethods[0] = new DSChoosemethod(chKey0,0);
+        joins[0] = new DSJoin(chKey0,0);
 ```
 
 ### Create DSTuple
@@ -78,7 +77,7 @@ When you've set all models and choosemethods, you can pass it to a tuple.
 Now you can pass your models and choosemethods to a generator. And if you want a period of 10ms, 3 threads, then you can set parameters as:
 ```markdown
 //        Finally set threads' period and amount that you want.
-//        Then pass your DSTuple and DSChoosemethod, start produce tuples！
+//        Then pass your DSTuple and DSJoin, start produce tuples！
         UnboundedDataSource ds = new UnboundedDataSource(10,3, tuple, chmethd);
         ds.start();
 

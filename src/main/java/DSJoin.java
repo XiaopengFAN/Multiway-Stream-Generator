@@ -1,7 +1,6 @@
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 
-public class DSChoosemethod {
+public class DSJoin {
 //    This Class can be inherit to Override theta_join() and calChooseRate() methods.
 //    It's Theta join is keyA > keyB > keyC
     DSModel[] models;
@@ -11,27 +10,29 @@ public class DSChoosemethod {
         selectivity += prob;
     }
 
-    DSChoosemethod(DSModel[] models){
+    DSJoin(DSModel[] models){
         this.models = models;
     }
 
     public boolean theta_join(int ... args) {
 //        You need to override this method for your use case
-        return ( (args[0]-args[1])>0 && (args[1]-args[2])>0 );
+        return ( (args[0]-args[1])>0 && (args[1]-args[2])>0 && (args[2]-args[3])>0
+                && (args[3]-args[4])>0 );
     }
 
     public boolean theta_join(double ... args) {
 //        You need to override this method for your use case
-        return ( (args[0]-args[1])>0 && (args[1]-args[2])>0 );
+        return ( (args[0]-args[1])>0 && (args[1]-args[2])>0 && (args[2]-args[3])>0
+                && (args[3]-args[4])>0 );
     }
 
-    public static double[] calChooseRate(DSChoosemethod[] chmethods) {
+    public static double[] calChooseRate(DSJoin[] joins) {
 //        It will return the choose-rate of all theta_join;
-        double[] rates = new double[chmethods.length];
+        double[] rates = new double[joins.length];
         int i = 0;
 //        Calculate choose-rate of each method
-        for (DSChoosemethod chmethod : chmethods) {
-            rates[i++] = chmethod.calc();
+        for (DSJoin join_method : joins) {
+            rates[i++] = join_method.calc();
         }
         return rates;
     }
@@ -42,10 +43,9 @@ public class DSChoosemethod {
 //        Traverse all situations by using a M-layer-lotheta_join.
 //        Since there might be different use cases, you can use pruning if possible.
         if (models[0].getMd() == "UniformInt"){
-//            selectivity = uniformalCalc();
             selectivity = generalCalc();
         } else if(models[0].getMd() == "Poisson") {
-
+            selectivity = generalCalc();
         } else{
             selectivity = generalCalc();
         }
@@ -78,12 +78,26 @@ public class DSChoosemethod {
                     if (num2<num3)
                         break;
 
-                    System.out.println(num1+"\t"+num2+"\t"+num3);
-                    if (theta_join(num1,num2,num3)) {
-//                        This fomular means these keys are independent.
-                        double p = prob1 * prob2 * prob3;
-                        selectivity += p;
-//                        System.out.println(num1+"\t"+num2+"\t"+num3+"\t"+selectivity);
+                    for (Map.Entry<Integer,Double> entry4 : models[3].getProbmap().entrySet()) {
+                        int num4 = entry4.getKey();
+                        double prob4 = entry4.getValue();
+                        if (num3 < num4)
+                            break;
+
+                        for (Map.Entry<Integer, Double> entry5 : models[4].getProbmap().entrySet()) {
+                            int num5 = entry5.getKey();
+                            double prob5 = entry5.getValue();
+                            if (num4 < num5)
+                                break;
+
+//                                System.out.println(num1+"\t"+num2+"\t"+num3);
+                            if (theta_join(num1, num2, num3, num4, num5)) {
+//                                This fomular means these keys are independent.
+                                double p = prob1 * prob2 * prob3 * prob4 * prob5;
+                                selectivity += p;
+//                                System.out.println(num1+"\t"+num2+"\t"+num3+"\t"+selectivity);
+                            }
+                        }
                     }
                 }
             }
