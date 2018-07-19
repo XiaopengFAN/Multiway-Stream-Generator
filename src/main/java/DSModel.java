@@ -24,7 +24,7 @@ public class DSModel {
     private boolean haveNextGaussian = false;
     private double nextGaussian = 0;
 
-    //    Test-Memory
+    //    test-Memory
     private static Map<Double,Integer> statisticDouble = new TreeMap<>();
     private static Map<Integer,Integer> statisticInt = new TreeMap<>();
     private int count = 0;
@@ -211,31 +211,44 @@ public class DSModel {
 //            k=0 is a special case
             prob = Math.exp(-lambda);
             cdf += prob;
-            probmap.put(0,prob);
-            map.put(0, cdf);
+            if (prob >0){
+                probmap.put(0,prob);
+                map.put(0, cdf);
+            }
 
+            double B = Math.exp(-lambda);
             for (int k = 1; cdf < 1.0; k++) {
-                int factorial = 1;
-
-                double B = Math.exp(-lambda);
+                double A = Math.pow(lambda,k);
+                prob = A*B ;
 
                 for (int i = 1; i <= k; i++){
-                    factorial *= i;
+                    prob /= i;
                 }
-                double A = Math.pow(lambda,k);
-                prob = A / factorial * B;
-                System.out.println(Integer.toString(k)+'\t'+Double.toString(prob)+'\t'+Double.toString(A)
-                        +'\t'+Double.toString(B));
+                if (cdf>0.95 && !(prob>0.0 && prob < 1.0)){
+                    break;
+                }
+//                System.out.println(Integer.toString(k)+'\t'+Double.toString(prob)+'\t'+Double.toString(A)
+//                        +'\t'+Double.toString(B));
                 if (prob>0.0 && prob<1.0) {
                     cdf += prob;
-                    probmap.put(k, prob);
-                    map.put(k, cdf);
+                    if (prob != 0 ){
+                        probmap.put(k, prob);
+                        map.put(k, cdf);
+                    }
+                } else {
+                    System.out.println("Algorithm ERROR in computing probability of Poisson. lambda = "+Integer.toString(lambda)+" number = "+Integer.toString(k)+" Probability = "+Double.toString(prob));
+                    System.out.println("lambda^k = "+A+" e^-lambda = "+B+" CDF = "+cdf);
+                    System.out.println();
+                    break;
                 }
 //                System.out.println(k+"\t"+cdf);
                 if ( k > lambda && prob <= 0) break;
             }
 
-            if (cdf < 0.9) System.exit(999999);
+            if (cdf < 0.9 || cdf > 1.1) {
+                System.out.println("Poisson CDF is "+Double.toString(cdf)+ " which is less than 0.9 .ERROR");
+                System.exit(999999);
+            };
         }
 
         private int generatePoisson() {
